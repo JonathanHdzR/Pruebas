@@ -14,7 +14,7 @@
 
 <body>
     <div id="app">
-        <titulo></titulo>
+        <titulo>Utilizando Vuex</titulo>
     </div>
 
     <script>
@@ -30,7 +30,7 @@
             computed: {
                 ...Vuex.mapState(["numero"]),
             },
-            methods:{
+            methods: {
                 ...Vuex.mapMutations(['aumentar', 'disminuir'])
             }
         });
@@ -51,7 +51,7 @@
         const store = new Vuex.Store({
             state: {
                 numero: 10,
-                cursos:[]
+                cursos: []
             },
             mutations: {
                 aumentar() {
@@ -60,15 +60,15 @@
                 disminuir() {
                     this.state.numero--;
                 },
-                llenarCursos(cursosAccion){
+                llenarCursos(cursosAccion) {
                     this.state.cursos = cursosAccion
                 }
             },
-            actions:{
-                obtenerCursos: async function({commit}){
+            actions: {
+                obtenerCursos: async function ({ commit }) {
                     const data = await fetch('cursos.json');
                     const cursos = await data.json();
-                    commit ('llenarCursos',cursos)
+                    commit('llenarCursos', cursos)
                 }
             }
         });

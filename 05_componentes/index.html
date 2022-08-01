@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes</title>
+    <!-- CDN V2 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+    <script src="/05_componentes/componentes/saludo.js"></script>
+    <script src="/05_componentes/componentes/contador.js"></script>
+</head>
+
+<body>
+    <!-- CDN V2 -->
+    <div id="app">
+        <saludo></saludo>
+        <contador></contador>
+        <contador></contador>
+    </div>
+    <script>
+
+        new Vue({
+            el: '#app',
+            data: {
+
+            }
+        })
+    </script>
+</body>
+
+</html>
